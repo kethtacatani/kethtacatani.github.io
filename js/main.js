@@ -223,6 +223,7 @@
 		var i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
 
+			var element = document.getElementById('lang-anim');
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 				
 				i++;
@@ -232,16 +233,23 @@
 
 					$('body .ftco-animate.item-animate').each(function(k){
 						var el = $(this);
+						
 						setTimeout( function () {
 							var effect = el.data('animate-effect');
 							if ( effect === 'fadeIn') {
 								el.addClass('fadeIn ftco-animated');
+								
 							} else if ( effect === 'fadeInLeft') {
 								el.addClass('fadeInLeft ftco-animated');
 							} else if ( effect === 'fadeInRight') {
 								el.addClass('fadeInRight ftco-animated');
 							} else {
 								el.addClass('fadeInUp ftco-animated');
+								if(el.hasClass('skills')){
+									$('.lang-anim').addClass('progress-anim');
+									console.log("work anim");
+								}
+								console.log("work");
 							}
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );
@@ -316,4 +324,9 @@ $(function() {
   }
 
 });
+
+function changeImage(path) {
+	var image = document.getElementById('image');
+	image.src = path; // Replace 'new_image.jpg' with the path to your new image
+  }
 

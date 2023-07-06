@@ -4784,6 +4784,7 @@ a.close.disabled {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
+
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -4861,6 +4862,7 @@ a.close.disabled {
 
 @media (min-width: 576px) {
   .modal-dialog {
+    
     max-width: 500px;
     margin: 1.75rem auto; }
   .modal-dialog-scrollable {
@@ -8761,20 +8763,20 @@ h1, h2, h3, h4, h5,
         background: var(--second-color) !important;
         color: #fff !important; }
   .btn.btn-secondary {
-    background: #a0f669 !important;
-    border: 1px solid #a0f669 !important;
+    background: var(--second-color) !important;
+    border: 1px solid var(--second-color) !important;
     color: #fff !important; }
     .btn.btn-secondary:hover {
-      border: 1px solid #a0f669 !important;
+      border: 1px solid #fff !important;
       background: transparent !important;
-      color: #a0f669 !important; }
-    .btn.btn-secondary.btn-outline-primary {
-      border: 1px solid #a0f669;
+      color: #fff !important; }
+    .btnondary.btn-outline-primary {
+      border: 1px solid var(--second-color);
       background: transparent;
-      color: #a0f669; }
+      color: var(--second-color); }
       .btn.btn-secondary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #a0f669;
+        background: var(--second-color);
         color: #fff; }
   .btn.btn-white {
     background: #fff !important;
@@ -9801,8 +9803,9 @@ textarea.form-control {
     border-radius: 15px;
     box-shadow: none;
     position: relative;
-    animation: animate-positive 2s;
+    
 }
+
 .progress .progress-icon,
 .progress .progress-value{
     width: 50px;
@@ -10260,6 +10263,10 @@ height:150px;
             
           }
 
+          .expand-btn:hover{
+            scale: 1.2;
+          }
+
          
 
 .java-clr{
@@ -10271,6 +10278,10 @@ height:150px;
 .green-clr{
    
   background-color: rgb(8, 160, 97,0.5);
+}
+.css-clr{
+   
+  background-color: #1f75c47f;
 }
 .red-clr{
   background-color: #FF00007f;
