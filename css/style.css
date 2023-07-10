@@ -9951,7 +9951,7 @@ margin-left:1rem;
 }
 
 .card .content button{
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Londrina Solid', cursive, sans-serif;
     font-weight: 100;
     font-size: 20px;
     color: var(--second-color);
