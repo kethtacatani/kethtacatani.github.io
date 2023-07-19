@@ -247,9 +247,9 @@
 								el.addClass('fadeInUp ftco-animated');
 								if(el.hasClass('skills')){
 									$('.lang-anim').addClass('progress-anim');
-									console.log("work anim");
+									// console.log("work anim");
 								}
-								console.log("work");
+								// console.log("work");
 							}
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );

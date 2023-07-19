@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
 
 	<link rel="stylesheet" href="css/animate.css">
 	
@@ -20,8 +22,25 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="scss/style.scss">
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			// https://dashboard.emailjs.com/admin/account
+			emailjs.init('hsxrlIxA4TgegtC3Y');
+		})();
+	</script>
+
+
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+	<i class="fa fa-arrow-up white-arrow"></i>
+	</button>
 	
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -966,31 +985,31 @@
 			
 			<div class="row block-9">
 				<div class="col-md-8">
-					<form action="https://formsubmit.co/b8feb19fbf7298888802f3cde601156d"  method="POST" class="bg-light p-4 p-md-5 contact-form">
+					<form id="contact-form"  method="POST" class="bg-light p-4 p-md-5 contact-form">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text"  name="Name" class="form-control" placeholder="Your Name">
+									<input type="text" id="name" name="Name" class="form-control" placeholder="Your Name">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="email" name="Email" class="form-control" placeholder="Your Email">
+									<input type="email" id="email" name="Email" class="form-control" placeholder="Your Email">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" name="Subject" class="form-control" placeholder="Subject">
+									<input type="text" id="subject" name="Subject" class="form-control" placeholder="Subject">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea id="" name="Message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									<textarea  name="Message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+									<button type="submit" value="Send Message" class="btn btn-primary py-3 px-5">Send</button>
 								</div>
 							</div>
 						</div>
@@ -1029,7 +1048,7 @@
 								<span class="fa fa-globe"></span>
 							</div>
 							<div class="text">
-								<p><span>Website</span> <a href="#">kethtacatani.github.io</a></p>
+								<p><span>Website</span> <a target="_blank" href="https://kethtacatani.github.io/portfolio2.0/">kethtacatani.github.io/portfolio2.0</a></p>
 							</div>
 						</div>
 					</div>
@@ -1046,21 +1065,21 @@
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Lets talk about</h2>
-						<p>Making your ideas come to live.</p>
+						<p>Making your ideas come to life.</p>
 						<p><a href="#" class="btn btn-primary">Learn more</a></p>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
-						<ul class="list-unstyled" style="padding: unset;">
-							<li> <a href="#home-section" style="padding: unset;"  class="fa fa-chevron-right mr-2 nav-link"><span>Home</span></a></li>
-							<li> <a href="#about-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>About</span></a></li>
-							<li> <a href="#skills-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>Skills</span></a></li>
-							<li> <a href="#services-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>Services</span></a></li>
-							<li><a href="#projects-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>Projects</span></a></li>
-							<li> <a href="#education-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>Education</span></a></li>
-							<li> <a href="#contact-section" style="padding: unset;" class="fa fa-chevron-right nav-link"><span>Contact</span></a></li>
+						<ul class="list-unstyled">
+							<li><a href="#home-section"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
+							<li><a href="#about-section"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+							<li><a href="#skills-section"><span class="fa fa-chevron-right mr-2"></span>Skills</a></li>
+							<li><a href="#services-section"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+							<li><a href="#projects-section"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+
 						</ul>
 					</div>
 				</div>
@@ -1068,6 +1087,7 @@
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Services</h2>
 						<ul class="list-unstyled">
+							
 							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Web Design</a></li>
 							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Web Development</a></li>
 							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Mobile App Development</a></li>
@@ -1085,7 +1105,7 @@
 							<ul>
 								<li><span class="icon fa fa-map marker"></span><span class="text">Calape Bohol Philippines</span></li>
 								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+6397 5022 9443</span></a></li>
-								<li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">kethtacatani.github.io</span></a></li>
+								<li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">kethtacatani@gmail.com</span></a></li>
 							</ul>
 						</div>
 						<ul class="ftco-footer-social list-unstyled mt-2">
@@ -1113,7 +1133,100 @@
 
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+		<script>
+			//Get the button
+			let mybutton = document.getElementById("btn-back-to-top");
 
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+			scrollFunction();
+			};
+
+			function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				mybutton.style.display = "block";
+				$('#btn-back-to-top').fadeIn();
+			} else {
+				mybutton.style.display = "none";
+				$('#btn-back-to-top').fadeOut();
+			}
+			}
+			// When the user clicks on the button, scroll to the top of the document
+			mybutton.addEventListener("click", backToTop);
+
+			function backToTop() {
+				$("html, body").animate({
+				scrollTop: 0
+				}, 500);
+				return false;
+			}
+		</script>
+		<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init('3yjbrMoKCAMKFmzDr');
+			})();
+		</script> -->
+
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+
+				var templateParams = {
+					name: document.getElementById('name').value, 
+					email: document.getElementById('email').value,
+					subject: document.getElementById('subject').value,
+					message: document.getElementById('message').value
+		};
+		
+		emailjs.send('service_dj7xgn8', 'template_9l015yt', templateParams, '3yjbrMoKCAMKFmzDr')
+			.then(function(response) {
+					swal({
+					title: "Sent Successfully!",
+				icon: "success",
+				button:"success"
+			});
+			console.log('SUCCESS!', response.status, response.text);
+			}, function(error) {
+			swal({
+				title: "Send Failed",
+				icon: "error",
+			});
+			console.log('FAILED...', error);
+			});
+			});
+		}
+		</script>
+
+
+
+
+
+
+		<!-- <script type="text/javascript">
+			window.onload = function() {
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+					// generate a five digit number for the contact_number variable
+					this.Name.value = Math.random() * 100000 | 0;
+					// these IDs from the previous steps
+					emailjs.sendForm('contact_service', 'contact_form', this)
+						.then(function() {
+							console.log('SUCCESS!');
+						}, function(error) {
+							console.log('FAILED...', error);
+						});
+				});
+			}
+		</script> -->
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
