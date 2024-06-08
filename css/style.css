@@ -278,6 +278,7 @@ legend {
   justify-content: end;
   margin: .5rem;
   padding: .5rem;
+  width: fit-content;
 }
 .skills-box{
   display: flex;
