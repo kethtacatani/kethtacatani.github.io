@@ -270,6 +270,41 @@ legend {
   color: inherit;
   white-space: normal; }
 
+.skill-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: end;
+  margin: .5rem;
+  padding: .5rem;
+}
+.skills-box{
+  display: flex;
+  justify-content: center;
+}
+
+.skill-icon{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+@media (max-width: 576px) {
+  .skills-box{
+    flex-wrap: wrap;
+  
+  }
+  }
+
+
+.skill-title{
+  font-size: 15px;
+}
+
 progress {
   vertical-align: baseline; }
 
@@ -10316,6 +10351,27 @@ height:150px;
 .arduino-clr{
   background-color: rgba(23,151,156,0.5);
   
+}
+.firebase-clr{
+  background-color: #FCCB3D;
+}
+.godot-clr{
+  background-color: #458DC0;
+}
+.yolov5-clr{
+  background-color: #EC4932;
+}
+.colab-clr{
+  background-color: #EA760B;
+}
+.figma-clr{
+  background-color: #26262E;
+}
+.photoshop-clr{
+  background-color: #232136;
+}
+.python-clr{
+  background-color: #4D8ABB;
 }
 
 /******************* Timeline Demo - 9 *****************/
